@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux';
 
-import { createBook, removeBook } from '../actions/index';
+import bookReducer from './books';
 
 const rootReducer = combineReducers({
-  createBook,
-  removeBook,
-})
+  bookReducer,
+});
 
 export default rootReducer;
