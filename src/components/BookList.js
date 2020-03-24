@@ -1,17 +1,15 @@
 import React from 'react';
+import Book from './Book';
 
 const BookList = ({ books }) => (
-
   <table>
     <th>ID</th>
     <th>Title</th>
     <th>Category</th>
-    {books.map(i => (
-      <tr>
-        <td>{i.id}</td>
-        <td>{i.title}</td>
-        <td>{i.category}</td>
-      </tr>
+    {books.map(book => (
+      <Book book={book} />
     ))}
   </table>
 );
+
+export default BookList;
