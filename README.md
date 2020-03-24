@@ -3,7 +3,7 @@
 ![Screenshot](screenshot.png?raw=true "Bookstore App")
 
 
-[Live Demo](heroku-link)
+[Live Demo](https://microverse-react-bookstore.herokuapp.com/)
 
 ## Contents
 
@@ -21,7 +21,7 @@ This project is a simple bookstore app made with React JS and deployed with Hero
 ## How to install
 
 Clone the repository:
-- `git clone https://github.com/marcos-medeiros/calculator-app.git`
+- `git clone https://github.com/uryelah/Microverse-702-Bookstore.git`
 
 Enter the directory in the terminal and then run:
 
@@ -55,7 +55,7 @@ This project was built using these technologies.
 
 👤 **Sarah Chamorro**
 
-- Github: [@uryelah](https://github.com/marcos-medeiros)
+- Github: [@uryelah](https://github.com/uryelah)
 - Twitter: [@sarah_chamorro](https://twitter.com/sarah_chamorro)
 - Linkedin: [Sarah Chamorro](https://www.linkedin.com/in/uryelah/)
 - Email: [sarahchamorro@mail.com](sarahchamorro@mail.com)
