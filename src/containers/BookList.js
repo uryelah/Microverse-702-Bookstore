@@ -6,18 +6,18 @@ import Book from '../components/Book';
 const BookList = ({ books }) => (
   <table>
     <theader>
-    <tr>
-      <th>Id</th>
-      <th>Title</th>
-      <th>CategoryAge</th>
-    </tr>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>CategoryAge</th>
+      </tr>
     </theader>
     <tbody>
-    {
-      books.map(book => (
-        <Book key={book.id} book={book} />
-      ))
-    }
+      {
+        books.map(book => (
+          <Book key={book.id} book={book} />
+        ))
+      }
     </tbody>
   </table>
 );
