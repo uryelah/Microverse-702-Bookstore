@@ -9,6 +9,6 @@ for (let i = 0; i < 20; i += 1) {
   initialState.push({ id: uuidv4(), title: `Book Title - ${i}`, category: categories[Math.floor(Math.random() * categories.length)] });
 }
 
-const store = createStore(rootReducer, { books: initialState });
+const store = createStore(rootReducer, { books: initialState, filteredBooks: initialState });
 
 export default store;

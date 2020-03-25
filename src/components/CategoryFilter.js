@@ -1,11 +1,11 @@
 import React from 'react';
 import categories from '../helpers/categories';
 
-const CategoryFilter = () => (
-  <select>
+const CategoryFilter = ({onChange}) => (
+  <select onChange={(e) => onChange(e.target.value)}>
     {
       categories.map((category, i) => (
-        <option key={category} default={i === 0 && true}>{category}</option>))
+        <option key={category} default={i === 0 && true} value={category}>{category}</option>))
     }
   </select>
 )
