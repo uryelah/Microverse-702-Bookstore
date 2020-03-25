@@ -6,9 +6,11 @@ import categories from './helpers/categories';
 const initialState = [];
 
 for (let i = 0; i < 20; i += 1) {
-  initialState.push({ id: uuidv4(), title: `Book Title - ${i}`, category: categories[Math.floor(Math.random() * categories.length)], show: true });
+  initialState.push({
+    id: uuidv4(), title: `Book Title - ${i}`, category: categories[Math.floor(Math.random() * categories.length)], show: true,
+  });
 }
 
-const store = createStore(rootReducer, { books: initialState, filteredBooks: initialState });
+const store = createStore(rootReducer, { books: initialState });
 
 export default store;

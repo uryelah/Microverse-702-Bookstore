@@ -2,13 +2,13 @@ import bookActions from '../actions/actionTypes';
 
 const { CHANGE_FILTER } = bookActions;
 
-const filteredBooks = (state = [], { type, filter }) => {
+const filter = (state = 'All', { type, filter }) => {
   switch (type) {
     case CHANGE_FILTER:
-      return state.filter(book => book.category === filter);
+      return filter;
     default:
       return state;
   }
 };
 
-export default filteredBooks;
+export default filter;
