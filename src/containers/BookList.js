@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { removeBook } from '../actions/index';
+import { removeBook, tempFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 import { changeFilter } from '../actions/index'
 
-const BookList = ({ filteredBooks, removeBook }) => (
+const BookList = ({ filteredBooks, books, removeBook, tempFilter }) => (
   <React.Fragment> 
-    <CategoryFilter onChange={handleChange} />
+    <CategoryFilter onChange={tempFilter} />
     <table>
       <theader>
         <tr>
@@ -19,8 +19,8 @@ const BookList = ({ filteredBooks, removeBook }) => (
       </theader>
       <tbody>
         {
-          filteredBooks.map(book => (
-            <Book key={book.id} book={book} onClick={removeBook} />
+          books.map(book => (
+            book.show ? <Book key={book.id} book={book} onClick={removeBook} /> : ''
           ))
         }
       </tbody>
@@ -33,17 +33,14 @@ BookList.propTypes = {
   removeBook: PropTypes.func.isRequired,
 };
 
-const handleChange = (e) => {
-  changeFilter(e);
-
-}
-
-
 const mapStateToProps = state => ({ books: state.books, filteredBooks: state.filteredBooks });
 
 const mapDispatchToProps = dispatch => ({
   removeBook: book => {
     dispatch(removeBook(book));
+  },
+  tempFilter: filter => {
+    dispatch(tempFilter(filter))
   },
   changeFilter: filter => {
     dispatch(changeFilter(filter))

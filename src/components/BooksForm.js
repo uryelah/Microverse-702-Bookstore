@@ -50,6 +50,7 @@ class BooksForm extends Component {
       id: uuidv4(),
       title,
       category,
+      show: true,
     });
     this.resetForm();
     e.preventDefault();
