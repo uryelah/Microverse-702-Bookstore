@@ -5,10 +5,20 @@ import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
+const listStyle = {
+  position: 'relative',
+  height: '90%',
+  overflowY: 'scroll',
+  scrollbarWidth: 'none',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+}
+
 const BookList = ({
   filter, changeFilter, books, removeBook,
 }) => (
-  <>
+  <div style={listStyle}>
     <CategoryFilter onChange={changeFilter} />
     <table>
       <theader>
@@ -27,7 +37,7 @@ const BookList = ({
         }
       </tbody>
     </table>
-  </>
+  </div>
 );
 
 BookList.propTypes = {

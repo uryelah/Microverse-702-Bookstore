@@ -1,8 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const bookStyle = {
+  width: 1200,
+  height: 170,
+  borderRadius: 4,
+  border: 'solid 1px #e8e8e8',
+  backgroundColor: '#ffffff',
+}
+
 const Book = ({ book, onClick }) => (
-  <tr key={book.id}>
+  <tr style={bookStyle} key={book.id}>
     <td>{book.id}</td>
     <td><strong>{book.title}</strong></td>
     <td>{book.category}</td>
