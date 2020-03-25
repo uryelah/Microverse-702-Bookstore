@@ -1,20 +1,12 @@
 import React from 'react';
 import BookListProvider from './BookList';
-import BooksForm from '../components/BooksForm';
+import BooksFormProvider from '../components/BooksForm';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div>
-        <BookListProvider />
-        <BooksForm />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <BookListProvider />
+    <BooksFormProvider />
+  </div>
+);
 
 export default App;
