@@ -61,16 +61,16 @@ class BooksForm extends Component {
     const { title, category } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="booksform" onSubmit={this.handleSubmit}>
         <h2 className="booksform-title">ADD NEW BOOK</h2>
-        <input className="booksform-input" type="text" value={title} onChange={this.handleChange} />
-        <select className="booksform-input" name="category" value={category} onChange={this.handleChange}>
+        <input placeholder="Book Title" className="booksform-input" type="text" value={title} onChange={this.handleChange} required />
+        <select className="booksform-input booksform-select" name="category" value={category} onChange={this.handleChange}>
           {
             categories.map((category, i) => (
               <option key={category} default={i === 0 && true}>{category}</option>))
           }
         </select>
-        <button className="booksform-btn" type="submit"><p className="booksform-btn-text">Submit</p></button>
+        <button className="booksform-btn" type="submit"><p className="booksform-btn-text">Add Book</p></button>
       </form>
     );
   }
