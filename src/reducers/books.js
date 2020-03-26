@@ -2,7 +2,6 @@ import bookActions from '../actions/actionTypes';
 
 const { CREATE_BOOK, REMOVE_BOOK } = bookActions;
 
-
 const books = (state = [], { type, book }) => {
   switch (type) {
     case CREATE_BOOK:

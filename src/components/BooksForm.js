@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-import categories from './categories';
+import categories from '../helpers/categories';
 import { createBook } from '../actions/index';
 
 class BooksForm extends Component {
@@ -50,6 +50,7 @@ class BooksForm extends Component {
       id: uuidv4(),
       title,
       category,
+      show: true,
     });
     this.resetForm();
     e.preventDefault();
