@@ -9,18 +9,16 @@ import CategoryFilter from '../components/CategoryFilter';
 const BookList = ({
   filter, changeFilter, books, removeBook,
 }) => (
-  <div className="booklist">
+  <main className="booklist">
     <CategoryFilter onChange={changeFilter} />
-    <main>
-      <section>
-        {
-          books.filter(b => b.category === filter || filter === 'All').map(book => (
-            <Book key={book.id} book={book} onClick={removeBook} />
-          ))
-        }
-      </section>
-    </main>
-  </div>
+    <section>
+      {
+        books.filter(b => b.category === filter || filter === 'All').map(book => (
+          <Book key={book.id} book={book} onClick={removeBook} />
+        ))
+      }
+    </section>
+  </main>
 );
 
 BookList.propTypes = {
