@@ -5,47 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 import categories from '../helpers/categories';
 import { createBook } from '../actions/index';
 
-const fTitleStyle = {
-  width: 174,
-  height: 24,
-  fontFamily: 'Montserrat',
-  fontSize: 20,
-  fontWeight: 'bold',
-  fontStretch: 'normal',
-  fontStyle: 'normal',
-  lineHeight: 'normal',
-  letterSpacing: -0.18,
-  color: '#888888',
-};
-
-const fInputStyle = {
-  width: 664,
-  height: 45,
-  borderRadius: 4,
-  border: 'solid 1px #e8e8e8',
-  backgroundColor: '#ffffff',
-}
-
-const btnStyle = {
-  width: 184,
-  height: 45,
-  borderRadius: 3,
-  backgroundColor: '#0290ff',
-}
-
-const btnTextStyle = {
-  width: 143,
-  height: 18,
-  fontFamily: 'RobotoSlab',
-  fontSize: 13,
-  fontWeight: 'bold',
-  fontStretch: 'normal',
-  fontStyle: 'normal',
-  lineHeight: 'normal',
-  letterSpacing: 0.5,
-  textAlign: 'center', 
-  color: '#ffffff',
-}
 
 class BooksForm extends Component {
   constructor(props) {
@@ -103,15 +62,15 @@ class BooksForm extends Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <h2 style={fTitleStyle}>ADD NEW BOOK</h2>
-        <input style={fInputStyle} type="text" value={title} onChange={this.handleChange} />
-        <select style={fInputStyle} name="category" value={category} onChange={this.handleChange}>
+        <h2 className="booksform-title">ADD NEW BOOK</h2>
+        <input className="booksform-input" type="text" value={title} onChange={this.handleChange} />
+        <select className="booksform-input" name="category" value={category} onChange={this.handleChange}>
           {
             categories.map((category, i) => (
               <option key={category} default={i === 0 && true}>{category}</option>))
           }
         </select>
-        <button style={btnStyle} type="submit"><p style={btnTextStyle}>Submit</p></button>
+        <button className="booksform-btn" type="submit"><p className="booksform-btn-text">Submit</p></button>
       </form>
     );
   }
