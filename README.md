@@ -1,6 +1,6 @@
 # Bookstore App
 
-![Screenshot](screenshot.png?raw=true "Bookstore App")
+![Screenshot](./public/screenshot.png?raw=true "Bookstore App")
 
 
 [Live Demo](https://microverse-react-bookstore.herokuapp.com/)
@@ -17,8 +17,6 @@
 ## About
 
 This project is a simple bookstore app made with React JS, Redux, and deployed with Heroku.
-
-<img src="./public/screenshot.png">
 
 ## Features
 
