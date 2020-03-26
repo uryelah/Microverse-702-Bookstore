@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import categories from '../helpers/categories';
 import { createBook } from '../actions/index';
 
+
 class BooksForm extends Component {
   constructor(props) {
     super(props);
@@ -60,15 +61,16 @@ class BooksForm extends Component {
     const { title, category } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" value={title} onChange={this.handleChange} />
-        <select name="category" value={category} onChange={this.handleChange}>
+      <form className="booksform" onSubmit={this.handleSubmit}>
+        <h2 className="booksform-title">ADD NEW BOOK</h2>
+        <input placeholder="Book Title" className="booksform-input" type="text" value={title} onChange={this.handleChange} required />
+        <select className="booksform-input booksform-select" name="category" value={category} onChange={this.handleChange}>
           {
             categories.map((category, i) => (
               <option key={category} default={i === 0 && true}>{category}</option>))
           }
         </select>
-        <button type="submit">Submit</button>
+        <button className="booksform-btn btn" type="submit"><p className="booksform-btn-text">Add Book</p></button>
       </form>
     );
   }

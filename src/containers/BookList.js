@@ -5,29 +5,20 @@ import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
+
 const BookList = ({
   filter, changeFilter, books, removeBook,
 }) => (
-  <>
+  <main className="booklist">
     <CategoryFilter onChange={changeFilter} />
-    <table>
-      <theader>
-        <tr>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Category</th>
-        </tr>
-      </theader>
-      <tbody>
-        <p>{filter}</p>
-        {
-          books.filter(b => b.category === filter || filter === 'All').map(book => (
-            <Book key={book.id} book={book} onClick={removeBook} />
-          ))
-        }
-      </tbody>
-    </table>
-  </>
+    <section>
+      {
+        books.filter(b => b.category === filter || filter === 'All').map(book => (
+          <Book key={book.id} book={book} onClick={removeBook} />
+        ))
+      }
+    </section>
+  </main>
 );
 
 BookList.propTypes = {

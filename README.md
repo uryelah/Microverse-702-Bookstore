@@ -8,6 +8,7 @@
 ## Contents
 
 * [About](#about)
+* [Features](#features)
 * [How to install](#install)
 * [Used tools](#tools)
 * [Authors](#authors)
@@ -15,7 +16,17 @@
 <a name="about"></a>
 ## About
 
-This project is a simple bookstore app made with React JS and deployed with Heroku.
+This project is a simple bookstore app made with React JS, Redux, and deployed with Heroku.
+
+<img src="./public/screenshot.png">
+
+## Features
+
+- Add new books
+- View all the books in store
+- Filter books by category
+- Remove books from the store
+- All book data and filter information is centered in the reducer
 
 <a name="install"></a>
 ## How to install
