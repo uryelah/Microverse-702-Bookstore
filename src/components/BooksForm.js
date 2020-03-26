@@ -70,7 +70,7 @@ class BooksForm extends Component {
               <option key={category} default={i === 0 && true}>{category}</option>))
           }
         </select>
-        <button className="booksform-btn" type="submit"><p className="booksform-btn-text">Add Book</p></button>
+        <button className="booksform-btn btn" type="submit"><p className="booksform-btn-text">Add Book</p></button>
       </form>
     );
   }
